@@ -37,5 +37,6 @@
             int b = Convert.ToInt32(y);
             Draw(a, b, sym);
         }
+        
     }
 }

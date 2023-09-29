@@ -21,7 +21,13 @@ namespace jalgpallmäng
             X = x;
             Y = y;
         }
-
+        //public void DrawBall(int x, int y, string sym)
+        //{
+        //    int a =Convert.ToInt32(X);
+        //    int b =Convert.ToInt32(Y);
+        //    Console.SetCursorPosition(x, y);
+        //    Console.Write(sym);
+        //}
         public void SetSpeed(double vx, double vy)
         {
             _vx = vx;

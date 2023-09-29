@@ -13,13 +13,17 @@ namespace jalgpallmäng
         public Stadium Stadium { get; }
         public Ball Ball { get; private set; }
 
-        public Game(Team homeTeam, Team awayTeam, Stadium stadium)
+        public Build Build { get; }
+
+
+        public Game(Team homeTeam, Team awayTeam, Stadium stadium, Build build)
         {
             HomeTeam = homeTeam;
             homeTeam.Game = this;
             AwayTeam = awayTeam;
             awayTeam.Game = this;
             Stadium = stadium;
+            Build = build;
         }
 
         public void Start()
@@ -27,6 +31,8 @@ namespace jalgpallmäng
             Ball = new Ball(Stadium.Width / 2, Stadium.Height / 2, this);
             HomeTeam.StartGame(Stadium.Width / 2, Stadium.Height);
             AwayTeam.StartGame(Stadium.Width / 2, Stadium.Height);
+            Build.SetPlayer(Ball.X, Ball.Y, "⚫");
+            
         }
         private (double, double) GetPositionForAwayTeam(double x, double y)
         {
@@ -54,6 +60,11 @@ namespace jalgpallmäng
                 Ball.SetSpeed(-vx, -vy);
             }
         }
+        public (double, double) GetPositionForBall(Ball ball, double x, double y, string sym)
+        {
+            return GetPositionForBall(ball, ball.X, ball.Y, sym);
+        }
+
 
         public void Move()
         {

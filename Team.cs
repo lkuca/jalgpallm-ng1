@@ -23,9 +23,10 @@ namespace jalgpallmäng
             foreach (var player in Players)
             {
                 player.SetPosition(
-                    rnd.NextDouble() * width,
-                    rnd.NextDouble() * height
+                    rnd.Next(1, width-1),
+                    rnd.Next(4, height-1)
                     );
+
             }
         }
 
