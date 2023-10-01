@@ -67,8 +67,11 @@ namespace jalgpallmäng
         {
             if (Team.GetClosestPlayerToBall() != this)//если игрока рядом нет
             {
+                //_vx = 0;
+                //_vy = 0;
                 _vx = 0;
                 _vy = 0;
+
             }
 
             if (GetDistanceToBall() < BallKickDistance)//если дистанция удара мяча не долетела до игрока
@@ -90,6 +93,7 @@ namespace jalgpallmäng
             else
             {
                 _vx = _vy = 0;
+                //X = Y = 1;
             }
         }
     }

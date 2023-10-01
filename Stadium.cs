@@ -22,7 +22,9 @@ namespace jalgpallmäng
 
         public bool IsIn(double x, double y) //True False- pall põllu väljas
         {
+            //return x >= 0 && x < Width && y >= 0 && y < Height;
             return x >= 0 && x < Width && y >= 0 && y < Height;
+
         }
     }
 }

@@ -24,6 +24,7 @@ namespace jalgpallmäng
             awayTeam.Game = this;
             Stadium = stadium;
             Build = build;
+            
         }
 
         public void Start()
