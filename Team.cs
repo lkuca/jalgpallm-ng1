@@ -39,7 +39,7 @@ namespace jalgpallmäng
 
         public (double, double) GetBallPosition()
         {
-            return Game.GetBallPositionForTeam(this);
+            return (Game.Ball.X, Game.Ball.Y);
         }
 
         public void SetBallSpeed(double vx, double vy)
